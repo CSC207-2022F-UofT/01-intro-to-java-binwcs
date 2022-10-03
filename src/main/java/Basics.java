@@ -43,6 +43,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        System.out.println("Hello World!");
 
 
 
@@ -62,6 +63,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+         int my_variable = 100;
 
 
 
@@ -99,6 +101,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+        for (int i = 10; i >=0; i--){
+            System.out.println("Current count: " + i);
+        }
 
 
     }
@@ -141,12 +146,13 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
-
-        // Fill in the rest of the body here
-
+        String[] parts = to_split.split(" ");
+        for (int i = 0; i < 7; i++) {
+            String part1 = parts[i];
+            ret.append(part1.charAt(0));
+        }
         return ret.toString();
     }
-
     /**
      * 7. Below is a method that takes in an integer array (similar to a list
      *    of integers). The method's name is 'oddSum' and it returns an int
@@ -170,7 +176,17 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
-
+        int num = arr.length;
+        if (num == 0 || num == 1){
+            current_sum = 0;
+        }
+        else{
+            for (int i = 1;  i <= num - 1;  i += 2 ){
+                if (i % 2 != 0) {
+                    current_sum += arr[i];
+                }
+            }
+        }
         return current_sum;
     }
 

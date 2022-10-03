@@ -68,7 +68,7 @@ public class BasicsTest {
         assertEquals(Basics.split("The First Letters Are Not That Interesting"), "TFLANTI");
     }
 
-    @Test(timeout = 50)
+    @Test(timeout = 10000)
     public void testTask5() {
         int[] arr = {5, 3, 1};
         assertEquals(Basics.oddSum(arr), 3);
